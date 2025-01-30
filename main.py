@@ -63,7 +63,7 @@ async def connect():
     #ssl_context = ssl.create_default_context(purpose=ssl.Purpose.CLIENT_AUTH)
 
     async with websockets.connect(
-        uri, ping_interval=None, ping_timeout=None, ssl=ssl_context, extra_headers=headers
+        uri, ping_interval=None, ping_timeout=None, ssl=ssl_context, additional_headers=headers
     ) as websocket:
 
         global heartbeat_task
